@@ -1,0 +1,53 @@
+{
+  "expo": {
+    "name": "주문형 액자",
+    "slug": "gift-frame",
+    "scheme": "gift-frame",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/app/logo.png",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.naldacompany.giftframe",
+      "runtimeVersion": "1.0.0"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/app/logo.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.naldacompany.giftframe",
+      "runtimeVersion": {
+        "policy": "appVersion"
+      }
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "single",
+      "favicon": "./assets/app/logo.png",
+      "backgroundColor": "#ffffff"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-secure-store",
+      [
+        "expo-font",
+        {
+          "fonts": [
+            "./assets/font/Pretendard-Light.ttf",
+            "./assets/font/Pretendard-Regular.ttf",
+            "./assets/font/Pretendard-SemiBold.ttf"
+          ]
+        }
+      ],
+      ["expo-asset"],
+      ["expo-splash-screen"]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
