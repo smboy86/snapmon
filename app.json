@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "주문형 액자",
-    "slug": "gift-frame",
-    "scheme": "gift-frame",
+    "name": "스냅몬",
+    "slug": "snapmon",
+    "scheme": "snapmon",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/app/logo.png",
@@ -11,7 +11,7 @@
     "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.naldacompany.giftframe",
+      "bundleIdentifier": "com.naldacompany.snapmon",
       "runtimeVersion": "1.0.0"
     },
     "android": {
@@ -19,7 +19,7 @@
         "foregroundImage": "./assets/app/logo.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.naldacompany.giftframe",
+      "package": "com.naldacompany.snapmon",
       "runtimeVersion": {
         "policy": "appVersion"
       }
@@ -44,7 +44,15 @@
         }
       ],
       ["expo-asset"],
-      ["expo-splash-screen"]
+      ["expo-splash-screen"],
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow $(PRODUCT_NAME) to access your camera",
+          "microphonePermission": "Allow $(PRODUCT_NAME) to access your microphone",
+          "recordAudioAndroid": true
+        }
+      ]
     ],
     "experiments": {
       "typedRoutes": true

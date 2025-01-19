@@ -12,6 +12,7 @@ import { PortalHost } from '@rn-primitives/portal';
 import { setAndroidNavigationBar } from '~/lib/android-navigation-bar';
 import { AuthProvider } from '~/providers/AuthProvider';
 import QueryProvider from '~/providers/QueryProvider';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
 
 import dayjs from 'dayjs';
 import 'dayjs/locale/ko'; // TODO - web에서 locale 지정이 풀리는 문제 발견
@@ -79,6 +80,7 @@ export default function RootLayout() {
       <QueryProvider>
         <ThemeProvider value={isDarkColorScheme ? DARK_THEME : LIGHT_THEME}>
           <StatusBar style={isDarkColorScheme ? 'light' : 'dark'} />
+          {/* <GestureHandlerRootView> */}
           <Stack
             screenOptions={{
               headerShown: true,
@@ -98,6 +100,7 @@ export default function RootLayout() {
               }}
             />
           </Stack>
+          {/* </GestureHandlerRootView> */}
           <PortalHost />
         </ThemeProvider>
       </QueryProvider>
